@@ -12,3 +12,7 @@ depois aprendemos a ultilizar o commit e descobrimos que os melhores codigos sã
 
 
 um branch foi publicada
+
+
+
+qe0igfh=Q0U8BHG=8u09ebg089ebgu89bW=8EUBG=089BEW=809GBE98=GB089EBG98wegb=ebg890eb
