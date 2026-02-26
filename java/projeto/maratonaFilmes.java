@@ -1,13 +1,5 @@
-import java.util.Scanner;
-public class maratonaFilmes {
-    
-
-        public static String nomeDoUsuario;
-        public static int filmes = 10;
-        public static double duracao = 1.34 ;
-        public static double teTo;//teTO = tempo Total 
-        public static Scanner in = new Scanner(System.in);
-    
+package projeto;
+public class maratonaFilmes {    
 
 
     public static void exibirCabechalho(){
@@ -19,25 +11,36 @@ public class maratonaFilmes {
         System.out.println("média do duracao dos filmes");
         //duracao = in.nextDouble();
         System.out.println("\n\n\n\tINFORMAÇÕES SOBRE DA MARATONA:");
-        System.out.println("Usuário:" + nomeDoUsuario  );
-        System.out.println("Quantidade de filmes:" + filmes);
-        System.out.println("Duração média dos filmes:" + duracao);
+        System.out.println("Usuário:" );
+        System.out.println("Quantidade de filmes:" );
+        System.out.println("Duração média dos filmes:");
         System.out.println("\n\n\tCÁLCULOS:");
         System.out.println();
     }
    
-    public static double calcularMedia(int filmes,double duracao){
-    
-        return  filmes * duracao;
+    public static double calcularMediaTotal(int quantidade , double duracao){
+        int intValue = 10; 
+        double doubleValue = (double) intValue;
+        return quantidade * duracao;
     }
      
+    public static String classificarMaratona(double horas){
+        if(horas > 4) {
+            System.out.println("Maratona leve");
+        }else if(horas > 4 && horas < 8){
+            System.out.println("Maratona Moderada");
+        }else if(horas > 8 ){
+            System.out.println("Maratona Épica");
+        }
+        return;
+    }
+
     
     public static void main(String[] args) {
-      
+     int quantidade = 10;
+       double duracao = 1.55;
         exibirCabechalho();
-          //teTO = tempo Total
-        System.out.println(teTo);
-
+        System.out.println(calcularMediaTotal(quantidade, duracao))
 
     }
 }
