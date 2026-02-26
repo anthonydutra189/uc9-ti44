@@ -1,10 +1,9 @@
-package aula04;
+package exerciciosifs;
 
 import java.util.Scanner;
 
 public class comparador {
-    
-    public static void main (String[] args){
+        public static void main (String[] args){
 
         int num1, num2;
         Scanner in = new Scanner(System.in);

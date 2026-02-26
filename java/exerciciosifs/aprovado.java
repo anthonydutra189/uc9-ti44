@@ -1,4 +1,4 @@
-package aula04;
+package exerciciosifs;
 
 import java.util.Scanner;
 
