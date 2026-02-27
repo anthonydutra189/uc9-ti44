@@ -25,22 +25,41 @@ public class maratonaFilmes {
     }
      
     public static String classificarMaratona(double horas){
-        if(horas > 4) {
+        
+        if(horas < 4) {
             System.out.println("Maratona leve");
         }else if(horas > 4 && horas < 8){
             System.out.println("Maratona Moderada");
         }else if(horas > 8 ){
             System.out.println("Maratona Épica");
         }
-        return ;
+        
+        return ""; 
     }
 
+    public static boolean istrue(boolean filmes) {
+
+        if(filmes = true){
+            System.out.println("True");
+        }else{
+            System.out.println("False");
+        }
+
+        return true;
+    }
     
     public static void main(String[] args) {
-     int quantidade = 10;
-       double duracao = 1.55;
-        exibirCabechalho();
-        System.out.println(calcularMediaTotal(quantidade, duracao))
+        boolean filmes;
+        double horas;
+        int quantidade = 10;
+        double duracao = 1.55;
+        horas = quantidade * duracao;
 
+        if(filmes)
+    
+        exibirCabechalho();
+        System.out.println(calcularMediaTotal(quantidade, duracao));
+        System.out.println(classificarMaratona(horas));
+        System.out.println(istrue(filmes));
     }
 }
