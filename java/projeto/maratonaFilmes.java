@@ -54,8 +54,6 @@ public class maratonaFilmes {
         int quantidade = 10;
         double duracao = 1.55;
         horas = quantidade * duracao;
-
-        if(filmes)
     
         exibirCabechalho();
         System.out.println(calcularMediaTotal(quantidade, duracao));
