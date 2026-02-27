@@ -1,27 +1,24 @@
 package projeto;
+
+import aula05.boo;
+
 public class maratonaFilmes {    
 
 
     public static void exibirCabechalho(){
         System.out.printf("|-----------------------------------------------|\n \t\tMARATONA DE FILMES \n|-----------------------------------------------|");
-        System.out.println("\ndigite seu nome");
-        //nomeDoUsuario = in.nextLine();
-        System.out.println("digite quantidade de filmes");
-        //filmes = in.nextInt();
-        System.out.println("média do duracao dos filmes");
-        //duracao = in.nextDouble();
         System.out.println("\n\n\n\tINFORMAÇÕES SOBRE DA MARATONA:");
-        System.out.println("Usuário:" );
+        System.out.println("Usuário:"  );
         System.out.println("Quantidade de filmes:" );
         System.out.println("Duração média dos filmes:");
         System.out.println("\n\n\tCÁLCULOS:");
         System.out.println();
     }
    
-    public static double calcularMediaTotal(int quantidade , double duracao){
+    public static double calcularTempoTotal(int filmes , double duracaoMedia){
         int intValue = 10; 
         double doubleValue = (double) intValue;
-        return quantidade * duracao;
+        return filmes * duracaoMedia;
     }
      
     public static String classificarMaratona(double horas){
@@ -37,27 +34,26 @@ public class maratonaFilmes {
         return ""; 
     }
 
-    public static boolean istrue(boolean filmes) {
-
-        if(filmes = true){
-            System.out.println("True");
+    public static boolean isValida(int filmes){
+       
+        if(filmes >= 1 ){
+            return true;
         }else{
-            System.out.println("False");
+            return false;
         }
-
-        return true;
+        
     }
     
     public static void main(String[] args) {
-        boolean filmes;
+     
         double horas;
-        int quantidade = 10;
-        double duracao = 1.55;
-        horas = quantidade * duracao;
+        int filmes = 0;
+        double duracaoMedia = 1.55;
+        horas = filmes * duracaoMedia;
     
         exibirCabechalho();
-        System.out.println(calcularMediaTotal(quantidade, duracao));
+        System.out.println(calcularTempoTotal(filmes, duracaoMedia));
         System.out.println(classificarMaratona(horas));
-        System.out.println(istrue(filmes));
+        System.out.println(isValida(filmes));
     }
 }
