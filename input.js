@@ -1,3 +1,6 @@
+// Script criado por um professor, para a simplificação obtencão input do teclado
+// Script MADE BY A TEACHER to simplifly getting keyboard inputs
+
 const readline = require('readline');
 
 async function input() {

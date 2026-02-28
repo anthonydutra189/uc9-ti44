@@ -1,6 +1,6 @@
  
 
-const input = require("../input");
+const input = require("../../input");
 
 (async() =>{
 console.log("digita")
