@@ -1,5 +1,5 @@
 // Script criado por um professor, para a simplificação obtencão input do teclado
-// Script MADE BY A TEACHER to simplifly getting keyboard inputs
+// Script MADE BY A Technical instructor to simplifly getting keyboard inputs
 
 const readline = require('readline');
 
