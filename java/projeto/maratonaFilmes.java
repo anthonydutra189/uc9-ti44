@@ -1,6 +1,6 @@
 package projeto;
 
-import aula05.boo;
+
 
 public class maratonaFilmes {    
 
