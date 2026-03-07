@@ -1,8 +1,8 @@
 package projeto;
 
-import java.util.Arrays;
 
-import aula02.scanbug;
+
+
 
 public class Meteor {
     
@@ -16,12 +16,13 @@ public class Meteor {
            { 30.2, 20.5 }, // Cidade 4
            { 25.7, 15.3 }, // Cidade 5
            };
-        String[] cidade ={ "#1","#2" , "#3" , "#4", "#5" };
-         
-          
-                          
-                          
-                          
+         String[] cidade ={ 
+         "#1",
+         "#2", 
+         "#3", 
+         "#4", 
+         "#5" 
+        };        
        //Umidades: [manhã, tarde, noite] para 5 cidades
         int[][] umidades = {
            { 85, 60, 75 }, // Cidade 1
@@ -32,8 +33,8 @@ public class Meteor {
            };
            
            String indice = "";
-           double max = 28.3;
-           double min = 18.7;
+           double max ;
+           double min ;
            double tempMedia = calcularMediaPonderadaTemperatura(max, min);
            int umidade = 40;
                                       
@@ -43,6 +44,7 @@ public class Meteor {
     
                System.out.print(identificarCidadeComMaiorAmplitudeTermica(indice, temperaturas, cidade));
 
+               System.out.println(calcularIndiceCalor(tempMedia, umidade));
        }
     public static void AnaliseMeteorologica(String[] args) {
          
@@ -94,40 +96,27 @@ public class Meteor {
      
                 }
           
-                indice = "a maior amplitude é " +  cidade[3]  +  "(" +  maiorAmplitude +")";
+                indice = "a maior amplitude é " +  cidade[3]  +  " (" +  maiorAmplitude +")";
                 return indice ;
                 
             }
 
-            /*public static double calcularIndiceCalor(double temp, int umidade) {
+            public static double calcularIndiceCalor(double temperaturas[][], int[][][] umidade) {
+              
+            double temp = temperaturas[0][0];
+            int umidade = umidade[0][0][0];   
                 
-            double maxTemp;
-            double minTemp;
+             
             
-            
-            // Temperaturas: [máxima, mínima] para 5 cidades
-            double[][] temperaturas = {
-                { 32.5, 22.1 }, // Cidade 1
-                { 35.8, 24.9 }, // Cidade 3
-                { 30.2, 20.5 }, // Cidade 4
-                { 25.7, 15.3 }, // Cidade 5
-                };
-            
-            // Umidades: [manhã, tarde, noite] para 5 cidades
-            int[][] umidades = {
-                { 85, 60, 75 }, // Cidade 1
-                { 78, 55, 70 }, // Cidade 2
-                { 90, 65, 80 }, // Cidade 3
-                { 82, 58, 72 }, // Cidade 4
-                { 75, 50, 68 }, // Cidade 5
+          
                 
                 
                 
-                }; 
-                return maxTemp - minTemp;
-                };
                 
-                */
+                return indiceCalor = temp + 0.5 * (umidade/100) * (temp - 20);
+            }
+                
+                
                /*          
                public static int gerarAlertas(int cidadeIndex) {
                 return;
