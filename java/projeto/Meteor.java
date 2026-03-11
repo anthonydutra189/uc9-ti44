@@ -32,26 +32,26 @@ public class Meteor {
            { 75, 50, 68 }, // Cidade 5
            };
            
-           String indice = "";
-           double max ;
-           double min ;
-           double tempMedia = calcularMediaPonderadaTemperatura(max, min);
-           int umidade = 40;
-                                      
-               System.out.println(calcularMediaPonderadaTemperatura(max, min));
-    
-               System.out.println(classificarClima(tempMedia,umidade));
-    
-               System.out.print(identificarCidadeComMaiorAmplitudeTermica(indice, temperaturas, cidade));
 
-               System.out.println(calcularIndiceCalor(tempMedia, umidade));
+         
+          
+           
+                                      
+               System.out.println(calcularMediaPonderadaTemperatura(temperaturas));
+    
+               System.out.println(classificarClima(temperaturas,umidades));
+    
+               System.out.print(identificarCidadeComMaiorAmplitudeTermica(temperaturas, cidade));
+
+               System.out.println(calcularIndiceCalor(temperaturas , umidades));
        }
     public static void AnaliseMeteorologica(String[] args) {
          
          
     }
-    public static double calcularMediaPonderadaTemperatura(double max, double min) {
-       
+    public static double calcularMediaPonderadaTemperatura(double[][] temperaturas) {
+       double max = temperaturas[2][0];
+    double min = temperaturas[2][1];
        if(min  < -50 || max > 60){
                     System.out.println("INABITAVEL");
         }      
@@ -59,7 +59,10 @@ public class Meteor {
     }
     
     
-    public static double classificarClima(double tempMedia, int umidadeMedia) {
+    public static double classificarClima(double temperaturas[][],int[][] umidade) {
+       double tempMedia = calcularMediaPonderadaTemperatura(temperaturas);
+       double umidadeMedia = umidade[0][0];
+        
         if(tempMedia > 30 && umidadeMedia > 75){
                     System.out.println("MUITO QUENTE E ÚMIDO");
         }
@@ -80,8 +83,8 @@ public class Meteor {
         }
          
         
-        public static String identificarCidadeComMaiorAmplitudeTermica(String indice,double[][] temperaturas, String[]cidade ){
-          
+        public static String identificarCidadeComMaiorAmplitudeTermica(double[][] temperaturas, String[]cidade ){
+            String indice;
             double maxAmp = temperaturas[0][0];
             double maiorAmplitude = 0;
             double listaDeAmplitude;
@@ -101,19 +104,19 @@ public class Meteor {
                 
             }
 
-            public static double calcularIndiceCalor(double temperaturas[][], int[][][] umidade) {
+            public static double calcularIndiceCalor(double temperaturas[][], int[][] umidade) {
               
             double temp = temperaturas[0][0];
-            int umidade = umidade[0][0][0];   
-                
-             
+            int umi = umidade[0][0];   
+            
+            double indiceCalor = temp + 0.5 * (umi/100) * (temp - 20);
             
           
                 
                 
                 
                 
-                return indiceCalor = temp + 0.5 * (umidade/100) * (temp - 20);
+                return indiceCalor ;
             }
                 
                 
